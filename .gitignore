@@ -1,0 +1,16 @@
+# Operator artifacts (created when using this stack)
+.env
+*.orig
+docker-compose.override.yml
+data/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor artifacts
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
