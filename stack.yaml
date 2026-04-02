@@ -1,0 +1,102 @@
+name: docker
+namespace: agentic-stacks
+version: 0.1.0
+description: >
+  Complete operational knowledge for building, deploying, managing, and
+  troubleshooting production containerized applications using Docker Engine.
+  Covers the full lifecycle from Dockerfile authoring and image optimization
+  through single-host and Swarm deployments to day-two operations, security
+  hardening, and disaster recovery.
+
+repository: https://github.com/agentic-stacks/docker
+
+target:
+  software: docker
+  versions:
+    - "27.x"
+
+skills:
+  - name: concepts
+    entry: skills/foundation/concepts
+    description: Docker architecture, containerd, OCI runtimes, image layers, namespaces/cgroups
+  - name: installation
+    entry: skills/foundation/installation
+    description: Installing Docker Engine on Linux, macOS, Windows, post-install configuration
+  - name: configuration
+    entry: skills/foundation/configuration
+    description: daemon.json settings, storage drivers, logging drivers, runtime configuration
+  - name: dockerfile
+    entry: skills/develop/dockerfile
+    description: Dockerfile syntax, instructions, multi-stage builds, best practices
+  - name: compose
+    entry: skills/develop/compose
+    description: Compose file authoring, services, profiles, extends, variable interpolation
+  - name: build-optimization
+    entry: skills/develop/build-optimization
+    description: BuildKit, layer caching, .dockerignore, image size reduction, build arguments
+  - name: registry
+    entry: skills/develop/registry
+    description: Push/pull workflows, private registries, Harbor, ECR/GCR/ACR, image signing
+  - name: single-host
+    entry: skills/deploy/single-host
+    description: docker run, compose up, restart policies, resource constraints
+  - name: swarm
+    entry: skills/deploy/swarm
+    description: Swarm init, services, stacks, overlay networking, rolling updates, secrets
+  - name: production
+    entry: skills/deploy/production
+    description: Reverse proxies, TLS termination, secrets management, resource limits, logging
+  - name: health-check
+    entry: skills/operations/health-check
+    description: Container health checks, system health, docker events, monitoring integration
+  - name: networking
+    entry: skills/operations/networking
+    description: Bridge, host, overlay, macvlan, DNS resolution, port mapping, network troubleshooting
+  - name: storage
+    entry: skills/operations/storage
+    description: Volumes, bind mounts, tmpfs, storage drivers, NFS, shared storage
+  - name: security
+    entry: skills/operations/security
+    description: Rootless mode, user namespaces, seccomp, AppArmor, image scanning, CIS benchmarks
+  - name: upgrades
+    entry: skills/operations/upgrades
+    description: Docker Engine upgrades, image update strategies, zero-downtime redeployment
+  - name: backup-restore
+    entry: skills/operations/backup-restore
+    description: Volume backup, container export/import, Swarm state backup, disaster recovery
+  - name: troubleshooting
+    entry: skills/diagnose/troubleshooting
+    description: Symptom-based diagnostic decision trees for common Docker issues
+  - name: cli-reference
+    entry: skills/reference/cli-reference
+    description: Essential docker and docker compose CLI patterns and one-liners
+  - name: known-issues
+    entry: skills/reference/known-issues
+    description: Docker 27.x specific bugs, caveats, and workarounds
+  - name: compatibility
+    entry: skills/reference/compatibility
+    description: OS, kernel, storage driver, and runtime compatibility matrices
+  - name: decision-guides
+    entry: skills/reference/decision-guides
+    description: Trade-off analyses for storage drivers, networking modes, orchestration, registries
+
+project:
+  structure:
+    - Dockerfile
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - .env.example
+    - .dockerignore
+    - configs/
+    - scripts/
+
+requires:
+  tools:
+    - name: docker
+      description: Docker CLI (version must match target Docker Engine)
+    - name: docker-compose
+      description: Docker Compose V2 (bundled as docker compose plugin)
+    - name: buildx
+      description: Docker Buildx for advanced build features (bundled with Docker Desktop)
+
+depends_on: []
