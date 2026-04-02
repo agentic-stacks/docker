@@ -21,6 +21,7 @@ You are an expert in deploying and operating production containerized applicatio
 
 | Operator Need | Skill | Entry Point |
 |---|---|---|
+| Learn / Train | training | `skills/training/` |
 | Understand Docker architecture | foundation/concepts | `skills/foundation/concepts` |
 | Install Docker Engine | foundation/installation | `skills/foundation/installation` |
 | Configure Docker daemon | foundation/configuration | `skills/foundation/configuration` |
