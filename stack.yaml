@@ -1,6 +1,5 @@
 name: docker
 namespace: agentic-stacks
-version: 0.1.0
 description: >
   Complete operational knowledge for building, deploying, managing, and
   troubleshooting production containerized applications using Docker Engine.
